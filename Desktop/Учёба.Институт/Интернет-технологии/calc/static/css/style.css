@@ -1,0 +1,30 @@
+.calc-wrapper .digits-buttons {
+    margin-top: 5px;
+}
+.calc-wrapper .digits-buttons .digit-button {
+    width: 30px;
+    height: 30px;
+}
+.calc-wrapper .operator-buttons .operator-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+.calc-wrapper .digits, .calc-wrapper .operator-buttons {
+    display: inline-block;
+}
+.digit-button:hover { background: rgb(150,220,99);}
+.digit-button:active{ background: green;}
+.operator-button:hover { background: rgb(150,220,99);}
+.operator-button:active{ background: green;}
+.digit-button {
+    background-color: greenyellow;
+    color: silver;
+    border: 2px solid;
+}
+.operator-button {
+    background-color: greenyellow;
+    color: silver;
+    border: 2px solid;
+}

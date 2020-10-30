@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, instail-scale=1.0">
+    </head>
+    <title>Регистрация</title>
+    <body class="text box">
+        <style>
+        .text{
+                text-align:center;
+            }
+        .frex{
+                border: 2px solid grey;
+                border-radius: 4px;
+                background-color:rgb(44, 40, 40);
+                color:white;
+            }
+        .button{
+                background-color:rgb(44, 40, 40);
+                border:double;
+                color: grey;
+                padding:7px 10px;
+                text-decoration:none;
+                margin:3px 1px;
+                cursor:pointer;
+            }
+            .box{
+                border-radius: 10px;
+                box-shadow:0 0 0 3px rgb(44, 40, 40);
+                padding: 10px 20px 10px 20px;
+                margin: 20px auto;
+                width: 250px;
+            }
+        </style>
+        <h1>Регистрация</h1>
+        <form action="" class="text">
+            <label>Логин:</label>
+                <br>
+            <input type="text" name="login" maxlength="16" placeholder="Ваш логин" class="frex"/>
+                <br>
+            <label>Фамилия:</label>
+                <br>
+            <input type="text" name="login" placeholder="Ваша фамилия" class="frex"/>
+                <br>
+            <label>Имя:</label>
+                <br>
+            <input type="text" name="login" placeholder="Ваше имя" class="frex"/>
+                <br>
+            <label>Пароль:</label>
+                <br>
+            <input type="password" name="password" maxlength="12" placeholder="Ваш пароль" class="frex"/>
+                <br>
+            <label>Повтор пароля:</label>
+                <br>
+            <input type="password" name="password" maxlength="12" placeholder="Ваш пароль ещё раз" class="frex"/>
+                <br>
+            <input type="checkbox" name="save_auth">Согласен на обработку персональных данных
+                <br>
+            <input type="submit" name="send_data" value="Зарегистрироваться" class="button">
+        </form>
+    </body>
+</html>

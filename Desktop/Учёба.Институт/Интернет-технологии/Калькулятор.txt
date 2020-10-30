@@ -1,0 +1,70 @@
+"use strict";
+
+(function() {
+    const resultField = document.querySelector('#result');
+    const clearBtn = document.querySelector('#clear');
+    const digitButtons = document.querySelectorAll('.digit-button');
+    const operatorButtons = document.querySelectorAll('.operator-button');
+    let varA;
+    let varB;
+    let prevOperator;
+    let answer = 0;
+    var switchVar = new Boolean(false);
+    var answerShown = new Boolean(false);
+
+    clearBtn.addEventListener('click', function(e) {
+        resultField.value = null;
+    });
+
+    digitButtons.forEach(function(digitButton) {
+        digitButton.addEventListener('click', function(e) {
+            let element = e.target;
+            if(answerShown){
+                resultField.value = null;
+                answerShown = !(answerShown);
+            }
+            let currentResult = Number(resultField.value);
+            resultField.value = (resultField.value == null ? String(element.value) : String(resultField.value + element.value) )
+            if(switchVar){
+                varA = resultField.value;
+            }
+            else{
+                varB = resultField.value;
+            }
+            
+            element.disabled = true;
+            setTimeout(function(){ element.disabled = false; },250)
+        });
+    });
+
+    operatorButtons.forEach(function(operatorButton){
+       operatorButton.addEventListener('click',function(e) {
+            var element = e.target;
+            var operator = element.value;
+            switchVar = !(switchVar);
+            if(operator != '='){
+                resultField.value = null;
+                prevOperator = operator;
+            }
+            else{
+                switch(prevOperator){
+                    case '+':
+                        answer = Number(varA) + Number(varB);
+                        break;
+                    case '-':
+                        answer = Number(varA) - Number(varB);
+                        break;
+                    case '*':
+                        answer = Number(varA) * Number(varB);
+                        break;
+                    case '/':
+                        answer = Number(varA) / Number(varB);
+                        break;
+                }
+                varA = answer;
+                resultField.value = answer;
+                answerShown = !(answerShown);
+            }
+       }); 
+    });
+})();

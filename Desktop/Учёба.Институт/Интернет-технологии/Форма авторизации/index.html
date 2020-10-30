@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, instail-scale=1.0">
+        <title>Forms and images</title>
+    </head>
+    <body>
+        <style>
+            .big-text{
+                font-size: 18px
+            }
+        </style>
+        <h1>Форма авторизации</h1>
+        <form action="">
+            <div>
+                <input type="text" name="login" maxlength="12" placeholder="Ваш логин"/>
+            </div>
+            <input type="email" name="password" placeholder="Ваш Email"/>
+            <input type="password" name="password" maxlength="12" placeholder="Ваш пароль"/>
+            <input type="submit" name="send_data" value="Отправить данные">
+            <input type="checkbox" name="save_auth" value="1" checked>
+            <input type="radio" name="type_auth" value="1">
+            <input type="radio" name="type_auth" value="2" checked>
+            <input type="radio" name="type_auth" value="3">
+            <select id="" name="your_email_select">
+                <option value="mail.ru">Mail.ru</option>
+                <option value="yandex.ru">Yandex.ru</option>
+                <option value="list.ru">List.ru</option>
+            </select>
+            <textarea name="your_text_area" id="" cols="10" rows="10" placeholder="Ваш комментарий"></textarea>
+            <button type="submit">Текст на кнопке</button>
+        </form>
+    </body>
+</html>
